@@ -1,0 +1,14 @@
+---
+galaxy_info:
+  author: Ryan Chouinard
+  description: MySQL Community YUM Repositories
+  license: MIT
+  min_ansible_version: 1.9
+  platforms:
+    - name: EL
+      versions:
+        - 5
+        - 6
+        - 7
+  galaxy_tags: []
+dependencies: []

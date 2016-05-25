@@ -1,0 +1,10 @@
+---
+- name: Install MySQL repo
+  yum:
+    name: "{{ mysql_repo_url }}"
+    state: present
+
+- name: Import MySQL GPG key
+  rpm_key:
+    key: "{{ mysql_repo_gpg_key_url }}"
+    state: present
