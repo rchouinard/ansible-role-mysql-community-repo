@@ -10,5 +10,7 @@ galaxy_info:
         - 5
         - 6
         - 7
-  galaxy_tags: []
+  galaxy_tags:
+    - packaging
+    - mysql
 dependencies: []
