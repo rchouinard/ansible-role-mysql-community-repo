@@ -12,7 +12,7 @@ None.
 
 Available variables are listed below, along with default values (see `defaults/main.yml`):
 
-    mysql_repo_url: "http://repo.mysql.com/mysql57-community-release-el{{ ansible_distribution_major_version }}.rpm"
+    mysql_repo_url: "http://repo.mysql.com/mysql57-community-release-{% if ansible_distribution == 'Fedora' %}fc{% else %}el{% endif %}{{ ansible_distribution_major_version }}.rpm"
     mysql_repo_gpg_key_url: "/etc/pki/rpm-gpg/RPM-GPG-KEY-mysql"
 
 The MySQL Community repo URL and GPG key URL. Generally, these should not be changed, but if this role is out of date, or if you need a very specific version, these can both be overridden.

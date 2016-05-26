@@ -8,7 +8,15 @@ env:
     run_opts: ""
   - distribution: centos
     version: 7
-    init: /usr/lib/systemd/systemd
+    init: /usr/sbin/init
+    run_opts: "--privileged --volume=/sys/fs/cgroup:/sys/fs/cgroup:ro"
+  - distribution: fedora
+    version: 22
+    init: /usr/sbin/init
+    run_opts: "--privileged --volume=/sys/fs/cgroup:/sys/fs/cgroup:ro"
+  - distribution: fedora
+    version: 23
+    init: /usr/sbin/init
     run_opts: "--privileged --volume=/sys/fs/cgroup:/sys/fs/cgroup:ro"
 
 services:
@@ -31,5 +39,5 @@ script:
 
   - 'sudo docker stop "$(cat ${container_id})"'
 
-#notifications:
-#  webhooks: https://galaxy.ansible.com/api/v1/notifications/
+notifications:
+  webhooks: https://galaxy.ansible.com/api/v1/notifications/
