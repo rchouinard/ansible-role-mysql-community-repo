@@ -1,0 +1,6 @@
+--- 
+- name: Install MySQL Community repo
+  package: name="{{ mysql_repo_rpm_url }}" state=present
+
+- name: Import MySQL Community GPG key
+  rpm_key: key="{{ mysql_repo_key_url }}" state=present
