@@ -15,12 +15,12 @@ galaxy_info:
         - '25'
     - name: Debian
       versions:
-        - '7'
-        - '8'
+        - wheezy
+        - jessie
     - name: Ubuntu
       versions:
-        - '14.04'
-        - '16.04'
+        - trusty
+        - xenial
   galaxy_tags:
     - packaging
     - mysql
