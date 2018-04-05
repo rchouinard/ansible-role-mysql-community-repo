@@ -1,6 +1,11 @@
---- 
-- name: Install MySQL Community repo
-  apt: deb="{{ mysql_repo_deb_url }}" state=present
+---
+- name: Install repository repo
+  package:
+    deb: "{{ mysql_repo_deb_url }}"
+    state: present
 
-- name: Import MySQL Community GPG key
-  apt_key: url="{{ mysql_repo_key_url }}" state=present
+- name: Import repository GPG key
+  apt_key:
+    id: "{{ mysql_repo_key_id }}"
+    url: "{{ mysql_repo_key_url }}"
+    state: present

@@ -1,26 +1,30 @@
---- 
+---
 galaxy_info:
   author: Ryan Chouinard
-  description: MySQL Community YUM Repositories
+  description: MySQL Community Repositories
   license: MIT
   min_ansible_version: '2.1'
   platforms:
     - name: EL
       versions:
-        - '6'
-        - '7'
+        - '6'     # supported through November 2020
+        - '7'     # supported thorugh June 2024
     - name: Fedora
       versions:
-        - '24'
-        - '25'
+        - '26'    # supported until release of 28
+        - '27'    # supported until release of 29
+        - '28'    # supported until TBD
     - name: Debian
       versions:
-        - wheezy
-        - jessie
+        - wheezy  # 7, supported through May 2018
+        - jessie  # 8, supported through June 2020
+        - stretch # 9, supported through ~2022
     - name: Ubuntu
       versions:
-        - trusty
-        - xenial
+        - trusty  # 14.04 LTS, supported through April 2019
+        - xenial  # 16.04 LTS, supported through April 2021
+        - artful  # 17.10, supported through July 2018
+        #- bionic  # 18.04 LTS, supported through TBD
   galaxy_tags:
     - packaging
     - mysql
